@@ -1,0 +1,112 @@
+include: package:lint/analysis_options.yaml
+
+analyzer:
+  exclude:
+    - build/**
+    - android/**
+    - ios/**
+    - "**/*.g.dart"
+    - lib/l10n.dart
+    - lib/generated
+  language:
+    strict-raw-types: true
+    strict-casts: true
+  strong-mode:
+    
+linter:
+  rules:
+
+    # Use relative imports for files in lib/.
+    always_use_package_imports: false
+
+    # Avoid relative imports for files in lib/.
+    avoid_relative_lib_imports: true
+
+    # Use parameter order as in json response
+    always_put_required_named_parameters_first: false
+
+    # Util classes are awesome!
+    avoid_classes_with_only_static_members: false
+
+    # Avoid using unnecessary statements.
+    unnecessary_statements: true
+
+    # Prefer final for variable declarations if they are not reassigned
+    prefer_final_locals: true
+
+    # Avoid redundant argument values.
+    avoid_redundant_argument_values: true
+
+    # Prefer generic function type aliases
+    prefer_generic_function_type_aliases: true
+
+    # Adhere to Effective Dart Guide directives sorting conventions.
+    directives_ordering: true
+
+    # Use collection literals when possible.
+    prefer_collection_literals: true
+
+    # Only use double quotes for strings containing single quotes.
+    prefer_single_quotes: true
+
+    # Future results in async function bodies must be awaited or marked unawaited using package.
+    unawaited_futures: true
+
+    # Avoid async functions that return void.
+    avoid_void_async: true
+
+    # Join return statement with assignment when possible.
+    join_return_with_assignment: true
+
+    # Use key in widget constructors.
+    use_key_in_widget_constructors: true
+
+    # Avoid lines longer than 80 characters.
+    lines_longer_than_80_chars: false
+
+    # Don't use more than one case with same value.
+    no_duplicate_case_values: true
+
+    # Declare method return types.
+    always_declare_return_types: true
+
+    # Avoid field initializers in const classes.
+    avoid_field_initializers_in_const_classes: true
+
+    # Don't declare multiple variables on a single line.
+    avoid_multiple_declarations_per_line: true
+
+    # Avoid returning null from members whose return type is bool, double, int, or num.
+    avoid_returning_null: false
+
+    # Prefer using lowerCamelCase for constant names.
+    constant_identifier_names: false
+
+    # Name source files using lowercase_with_underscores.
+    file_names: false
+
+    # Private field could be final.
+    prefer_final_fields: true
+
+    # Missing whitespace between adjacent strings.
+    missing_whitespace_between_adjacent_strings: true
+
+    # Use isEmpty for Iterables and Maps.
+    prefer_is_empty: true
+
+    # Use isNotEmpty for Iterables and Maps.
+    prefer_is_not_empty: true
+
+    # Don't use final for local variables.
+    unnecessary_final: false
+    
+    # Avoid use library prefixes
+    library_prefixes: false
+
+    # Use static constructor
+    prefer_constructors_over_static_methods: false
+    
+    # Don't sort in yaml
+    sort_pub_dependencies: false
+
+    
